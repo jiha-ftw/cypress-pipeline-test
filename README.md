@@ -24,5 +24,8 @@ docker compose up --abort-on-container-exit
 ```
 API container will exit when cypress container exits.
 
-## Run tests in pipeline
+## Run tests in Azure pipeline
 [pipeline.yml](pipeline.yml)
+
+## Run tests in Github Actions
+[run-tests.yml](.github/workflows/run-tests.yml)
