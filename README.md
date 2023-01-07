@@ -34,3 +34,4 @@ Uses a pipeline variable called CYPRESS_KEY.
 ## Run tests in Github Actions
 Uses a repository secret called CYPRESS_KEY.
 [run-tests.yml](.github/workflows/run-tests.yml)
+
