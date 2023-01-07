@@ -13,6 +13,9 @@ jobs:
     
     steps:
     - uses: actions/checkout@v3
+
+    - name: echo
+      run: echo "is this showing? ${{ secrets.CYPRESS_KEY }}"
     
     - name: Start Docker
       run: docker-compose build --build-arg CYPRESS_KEY="${{ secrets.CYPRESS_KEY }}"
