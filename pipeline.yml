@@ -9,7 +9,13 @@ pr:
 
 steps:
   - task: DockerCompose@0
-    displayName: "Run a Docker Compose command"
+    displayName: "Build Docker services"
+    inputs:
+      dockerComposeFile: "docker-compose.yml"
+      dockerComposeCommand: "build --build-arg CYPRESS_KEY="${{ variables.CYPRESS_KEY }}""
+
+  - task: DockerCompose@0
+    displayName: "Run Docker services"
     inputs:
       dockerComposeFile: "docker-compose.yml"
       dockerComposeCommand: "up --abort-on-container-exit"

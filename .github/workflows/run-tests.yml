@@ -17,4 +17,4 @@ jobs:
     - name: Start Docker
       run: |
         docker-compose build --build-arg CYPRESS_KEY="${{ secrets.CYPRESS_KEY }}"
-        docker-compose up --abort-on-container-exit --no-recreate
+        docker-compose up --abort-on-container-exit
