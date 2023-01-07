@@ -20,7 +20,7 @@ This will run [docker-compose.yml](docker-compose.yml) which has references to t
 Ofc, [Docker](https://docs.docker.com/get-docker/) is needed for this to work.
 
 Apparently, `compose up` does not accept the `--build-arg`, so passing an argument needs to happen like this (or use environment variables).
-`CYPRESS_KEY` is passed as value for `--key` on `cypress run`, needed for publishing test runs to a Cypress project.
+`CYPRESS_KEY` is passed as value for `--key` on `cypress run`, needed for publishing test runs to a Cypress project/dashboard.
 ```
 docker-compose build --build-arg CYPRESS_KEY="[Key goes here]"
 docker-compose up --abort-on-container-exit
@@ -28,7 +28,7 @@ docker-compose up --abort-on-container-exit
 API container will exit when cypress container exits.
 
 ## Run tests in Azure pipeline
-Uses a pipeline variables called CYPRESS_KEY.
+Uses a pipeline variable called CYPRESS_KEY.
 [pipeline.yml](.azure/pipeline.yml)
 
 ## Run tests in Github Actions
