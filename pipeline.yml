@@ -1,9 +1,9 @@
 trigger:
-  - branches:
+  branches:
     include:
       - master
 pr:
-  - branches:
+  branches:
     include:
       - master
 
