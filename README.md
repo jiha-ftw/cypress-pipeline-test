@@ -17,9 +17,14 @@ npx cypress run --config baseUrl=http://localhost:5170
 
 (Alter base URL/port if needed.)
 
-## Run tests in container
-This will run [docker-compose.yml](docker-compose.yml)
+## Run tests in container on local
+This will run [docker-compose.yml](docker-compose.yml).
+Ofc, [Docker](https://docs.docker.com/get-docker/) is needed for this to work.
+
+Apparently, `compuse up` does not accept the `--build-arg`, so passing an argument needs to happen like this (or use environment variables).
+`CYPRESS_KEY` is passed as value for `--key` on `cypress run`, needed for publishing test runs to a Cypress project.
 ```
+docker-compose build --build-arg CYPRESS_KEY=""
 docker compose up --abort-on-container-exit
 ```
 API container will exit when cypress container exits.
