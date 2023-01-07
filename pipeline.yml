@@ -1,10 +1,10 @@
 trigger:
   - branches:
-      include:
+    include:
       - master
 pr:
   - branches:
-      include:
+    include:
       - master
 
 steps:
