@@ -12,7 +12,7 @@ steps:
     displayName: "Build Docker services"
     inputs:
       dockerComposeFile: "docker-compose.yml"
-      dockerComposeCommand: "build --build-arg CYPRESS_KEY=\"$( CYPRESS_KEY )\""
+      dockerComposeCommand: "build --build-arg CYPRESS_KEY=\"${ CYPRESS_KEY }\""
 
   - task: DockerCompose@0
     displayName: "Run Docker services"
