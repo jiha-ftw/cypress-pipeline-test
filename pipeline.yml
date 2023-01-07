@@ -1,0 +1,8 @@
+
+
+steps:
+  - task: DockerCompose@0
+    displayName: "Run a Docker Compose command"
+    inputs:
+      dockerComposeFile: "docker-compose.yml"
+      dockerComposeCommand: "up --abort-on-container-exit"
