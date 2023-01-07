@@ -10,6 +10,8 @@ services:
 
   cypresstests:
     build:
+      args:
+        CYPRESS_KEY: "defaultvalue"
       context: ./cypress.io
       dockerfile: Dockerfile
     networks:
