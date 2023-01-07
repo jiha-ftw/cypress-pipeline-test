@@ -18,7 +18,7 @@ npx cypress run --config baseUrl=http://localhost:5170
 (Alter base URL/port if needed.)
 
 ## Run tests in container on local
-This will run [docker-compose.yml](docker-compose.yml).
+This will run [docker-compose.yml](docker-compose.yml) which has references to the [Api Docker file](CoreApi/Dockerfile) and the [Cypress Docker file](cypress.io/Dockerfile).
 Ofc, [Docker](https://docs.docker.com/get-docker/) is needed for this to work.
 
 Apparently, `compuse up` does not accept the `--build-arg`, so passing an argument needs to happen like this (or use environment variables).
