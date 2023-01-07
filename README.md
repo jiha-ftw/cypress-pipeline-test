@@ -25,7 +25,7 @@ Apparently, `compuse up` does not accept the `--build-arg`, so passing an argume
 `CYPRESS_KEY` is passed as value for `--key` on `cypress run`, needed for publishing test runs to a Cypress project.
 ```
 docker-compose build --build-arg CYPRESS_KEY=""
-docker compose up --abort-on-container-exit
+docker-compose up --abort-on-container-exit
 ```
 API container will exit when cypress container exits.
 
