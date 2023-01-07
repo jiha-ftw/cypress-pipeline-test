@@ -1,11 +1,11 @@
 trigger:
   - branches:
       include:
-        - master
+      - master
 pr:
   - branches:
       include:
-        - master
+      - master
 
 steps:
   - task: DockerCompose@0
